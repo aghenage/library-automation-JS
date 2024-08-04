@@ -7,9 +7,9 @@ Feature: Borrowing books
         #! Acceptance Criteria are missing :(
         #TODO: Analyze the user story and create acceptance criteria yourself!
         #Acceptance Criteria
-        * I should be able to see a list of available books
-        * I should be able to select a book to borrow
-        * I should be able to borrow a book by clicking a "Borrow" button
+        #* I should be able to see a list of available books
+        #* I should be able to select a book to borrow
+        #* I should be able to borrow a book by clicking a "Borrow" button
 
 
     Background:

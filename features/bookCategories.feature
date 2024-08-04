@@ -14,7 +14,6 @@ Feature: Book Categories
         Given I am on the Book Categories page
         When I click the Book Categories drop down 
         Then I should see 21 book categories
-        And I should see 21 book categories
         |categories|
         |ALL|
         |Action and Adventure|
@@ -26,7 +25,8 @@ Feature: Book Categories
         |Fable|
         |Fairy Tale|
         |Fan-Fiction|
-        |Fantasy|Historical Fiction|
+        |Fantasy|
+        |Historical Fiction|
         |Horror|
         |Science Fiction|
         |Humor|

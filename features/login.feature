@@ -1,4 +1,4 @@
-@lib-01
+@lib-01-01
 Feature: Login to the application
   As a user, I want to login so that I can access the app's main features.
 
@@ -20,23 +20,25 @@ Feature: Login to the application
       | admin     |
       | student   |
 
-
+  @lib-01-02
   # TODO: Verify users can not login with invalid credentials
-  Scenario Outline: Verify users see an error message when trying to login with invalid credentials
-    When user enters invalid username '<user-type>'
-    And user enters invalid password '<user-type>'
+  Scenario Outline: Verify users cannot login with invalid credentials
+    When user enters invalid username "<invalid-username>"
+    And user enters invalid password "<invalid-password>"
     And user clicks the login button
-    Then user sees a "Sorry, Wrong Email or Password" error pop-up message
+    Then user should see a "Sorry, Wrong Email or Password" error pop-up
     Examples:
-      | user-type |
-      | admin     |
-      | studen    |
+      | invalid-username | invalid-password |
+      | library@student  | password123      |
+      | library@cydei    | wrongpassword    |
 
 
+
+    @lib-01-03
   # TODO: Verify users are not allowed to login without any credentials
-  Scenario: Verify users see an error message when trying to login without any credentials
+  Scenario: Verify users are not allowed to login without any credentials
     When user clicks the login button
-    Then user sees a "This field is required." error pop-up message
+    Then user should see a "This field is required." error pop-up
 
 
 
